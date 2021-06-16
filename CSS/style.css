@@ -1,0 +1,574 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@800&display=swap');* {
+    margin: 0; /* 마진값 초기화 */
+    padding: 0; /* 패딩값 초기화 */
+    box-sizing: border-box; /* 박스 영역은 테두리까지 지정 */
+}
+
+* {
+    margin:0;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* unordered list */
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+#container {
+    margin: 0 auto; /* 화면 중앙에 배치 */
+    width: 1200px;
+}
+
+/* 헤더 영역 */
+header {
+    width: 100%;
+    height: 110px;
+}
+
+/* 로고 영역 */
+#logo {
+    float: left; /* 왼쪽으로 플로팅 */
+    width: 320px;
+    height: 100px;
+    line-height: 100px; /* height값과 같게 만들어서 세로로 중간에 오도록 맞춤 */
+    padding-left: 10px; /* 왼쪽 패딩값 지정 padding은 width에 포함 됨 */
+}
+
+#logo #title {
+    font-family: Gothic;
+    font-weight: 900;
+    font-size : 23px;
+    color : darkblue; /* 폰트색깔 다크블루 */
+}
+
+/* 내비게이션 영역 */
+nav {
+    float: right; /* 오른쪽으로 플로팅 */
+    width: 870px;
+    height: 100px;
+    padding-top: 20px; /* 메뉴를 아래로 내리기 위해 */
+}
+
+#topMenu {
+    height: 60px;
+}
+
+#topMenu > li {
+    width: 20%;
+    float: left; /* 메뉴 항목을 왼쪽으로 플로팅 */
+    position: relative; /* 서브메뉴를 absolute로 만들기 위해 부모 요소를 relative로 저장 */
+}
+
+#topMenu > li > a {
+    display: block; /* 링크 텍스트는 블록으로 설정 */
+    font-weight: 600;
+    color:#222;
+    padding: 20px 0 20px 60px;
+}
+
+#topMenu > li > a:hover {
+    font-size: 20px; /* 마우스 올리면 크기 확대 */
+}
+
+#topMenu > li > ul {
+    display: none; /* 서브메뉴를 처음에는 숨김 */
+    position: absolute;
+    width: 160px;
+    background-color: white;
+    left: 20px;
+    margin: 0;
+}
+
+#topMenu > li > ul > li {
+    padding: 10px 10px 10px 30px;
+}
+
+#topMenu > li > ul > li > a {
+    font-size: 14px;
+    padding: 10px;
+    color: darkgray;
+}
+
+#topMenu > li:hover > ul {
+    display: block;
+    z-index: 10; /* 슬라이드쇼에 가리지 않게 조절 */
+}
+
+#topMenu > li > ul > li > a:hover {
+    color : black;
+    font-size: 17px;
+}
+
+
+/* 이미지 슬라이드쇼 영역 */
+#slideShow {
+    clear: both; /* 플로팅 해제 */
+    width: 100%;
+    overflow: hidden; /* 영역 넘치면 숨김 */
+    position: realtive;
+}
+
+#sildes {
+    position: relative;
+}
+
+#slides > img {
+    width: 100%;
+    float: left; /* 가로로 배치 */
+}
+
+
+
+/* 콘텐츠 영역 */
+#contents > p {
+    font-size: 27px;
+    padding-top: 80px;
+    font-weight: bold;
+    color: darkblue;
+}
+
+#contents span {
+    font-size: 18px;
+    font-weight: 600;
+    color: gray;
+}
+
+.darkblue {
+    height: 3px;
+    border: 0; 
+    border-top: 3px solid darkblue;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+#contents img {
+    margin-top: 3px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    width: 80%;
+}
+
+#bestdrinks, #bestbakerys {
+    float: left;
+    margin-bottom: 40px;
+}
+
+#bestdrinks > .bold {
+    font-size: 22px;
+    font-weight: bold;
+    color: gray;
+    padding-left: 20px;
+}
+
+#bestbakerys > #bold {
+    font-size: 22px;
+    font-weight: bold;
+    color: gray;
+    padding-left: 20px;
+    margin-top: 50px;
+}
+
+#bestdrinks > p {
+    font-size: 15px;
+    color: gray;
+    padding-left: 20px;
+}
+
+#bestbakerys > p {
+    font-size: 15px;
+    color: gray;
+    padding-left: 20px;
+}
+
+.bestmenu1 {
+    width: 19%;
+    height: 330px;
+    float: left;
+    background-color: whitesmoke;
+    margin: 5px;
+}
+
+.bestmenu2 {
+    width: 19%;
+    height: 340px;
+    float: left;
+    background-color: whitesmoke;
+    margin: 5px;
+}
+
+.bestmenu1 > p {
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    font-size: 14px;
+}
+
+.bestmenu2 > p {
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    font-size: 14px;
+}
+
+.name {
+    text-align: center;
+    color:#222;
+}
+
+.set {
+    border-top: 1px solid darkgray;
+    margin-top: 10px;
+}
+
+.get {
+  border-top: 1px solid darkgray;
+}
+
+
+
+/* 탭 메뉴 영역 */
+#tabmenu {
+    float: left; /* 왼쪽으로 플로팅 */
+    width: 600px;
+    height: 100%;
+}
+
+
+/* 푸터 영역 */
+.footer-container {
+    clear: both;
+    background-color: whitesmoke;
+    border-top: 2px solid #222;
+}
+
+.footer-content {
+    width: 1200px;
+    height: 170px;
+    margin: 0 auto;
+    overflow: auto; /* float를 사용 한 경우 float를 감싸고 있는 container는 반드시 overflo : auto */
+}
+
+#bottom1, #bottom2, #bottom3 {
+    width: 33.333%;
+    height: 170px;
+    float: left;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+}
+
+#outside {
+    text-align: center;
+    font-size: 18px;
+    color: darkgrey;
+}
+
+#inside {
+    text-align: left;
+    font-size: 13px;
+    padding-top: 20px;
+    color: darkgrey;
+}
+
+#middle {
+    border-right: 1px solid lightgrey;
+}
+
+#bottom3 > #middle {
+    border-right: none;
+}
+
+#bottom1 #inside {
+    padding-left: 30px;
+}
+
+
+/* menu style */
+#top {
+    color:darkblue;
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+/* 세부메뉴들 자리배치 */
+
+/* drink 영역 */
+#first {
+    width: 33%;
+    float: left;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: whitesmoke;
+}
+
+#second {
+    width: 33%;
+    float: left;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: whitesmoke;
+}
+
+#third {
+    width: 33%;
+    float: left;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: whitesmoke;
+}
+
+#espresso, #beverage, #tea {
+    height: 480px;
+}
+
+#coldbrew, #bubble, #blendingtea {
+    height: 330px;
+}
+
+#flatccino, #shake, #ade {
+    height: 230px;
+}
+
+/* bakery 영역 */
+#one {
+    width: 50%;
+    float: left;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: whitesmoke;
+}
+
+#two {
+    width: 50%;
+    float: left;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: whitesmoke;
+}
+
+#breadone, #breadtwo {
+    height: 430px;
+}
+
+#dessert, #bingsoo {
+    height: 340px;
+}
+
+
+#first h3, #second h3, #third h3 {
+    color:gray;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+#one h3, #two h3 {
+    color:gray;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+
+ul > li > span {
+    float: right;
+}
+
+div > ul {
+    padding-top: 10px;
+}
+
+.menu-list > li {
+    padding-top: 7px;
+    padding-bottom: 5px;
+    list-style-type: none;
+    font-size: 14px;
+}
+
+div > ul {
+    padding-bottom: 40px;
+}
+
+
+
+
+
+/* 신메뉴 소식 */
+#newmenu_first {
+    width: 33.3%;
+    float: left;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+#newmenu_second {
+    width: 33.3%;
+    float: left;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+#newmenu_third {
+    width: 33.3%;
+    float: left;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+#newmenu_first img, #newmenu_second img, #newmenu_third img {
+    width: 80%;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+#caramel, #redbeenbingsoo, #yogurt, #vanilla, #mangoyogurt, #applerich, #candy, #peach, #strawberry {
+    background-color:whitesmoke;
+    height: 570px;
+    margin-top: 40px;
+}
+
+#yogurt, #peach, #strawberry {
+    padding-bottom: 0px;
+}
+
+#name {
+    text-align: center;
+    color:#222;
+}
+
+#name2 {
+    text-align: center;
+    color: gray;
+}
+
+.new {
+    margin: 30px 0px 10px 40px;
+}
+
+.new td {
+    width: 200px;
+    height: 10px;
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#name {
+    padding-top: 20px;
+}
+
+#newmenu_first p, #newmenu_second p, #newmenu_third p {
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+
+
+/* notice_positive, notice_negative 영역 */
+#positive, #negative {
+    width: 90%;
+    border-bottom: 1px;
+    padding-top: 20px;
+    margin-left: 55px;
+}
+
+.titles > a {
+    color:#222;
+}
+
+#positive td {
+    border-bottom: 1px solid lightgray;
+}
+
+#negative td {
+    border-bottom: 1px solid lightgray;
+}
+
+#positive td:nth-child(1) {
+    width: 10%;
+}
+
+#negative td:nth-child(1) {
+    width: 10%;
+}
+
+#positive td:nth-child(2) {
+    padding-left: 15px;
+    width: 50%;
+}
+
+#negative td:nth-child(2) {
+    padding-left: 15px;
+    width: 50%;
+}
+
+#positive > thead, #negative > thead {
+    text-align: center;
+    background-color: whitesmoke;
+    height: 40px;
+}
+
+#positive > tbody {
+    height: 200px;
+}
+
+#negative > tbody {
+    height: 100px;
+}
+
+.numbers, .places, .dates {
+    text-align: center;
+}
+
+
+
+/* 칭찬,불만 사연 영역 */
+.project {
+    font-size: 30px;
+}
+
+.project span {
+    float: right;
+    font-size: 17px;
+}
+
+.project .blue {
+    height: 3px;
+    border: 0; 
+    border-top: 3px solid darkblue;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.project p {
+    margin: 10px;
+    font-size: 16px;
+}
+
+
+
+
+
+
+
